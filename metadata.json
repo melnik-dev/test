@@ -1,0 +1,7 @@
+{
+  "name": "MyMemeToken",
+  "symbol": "MEME",
+  "description": "This is a meme token created on Solana devnet.",
+  "image": "sapphire-past-meadowlark-119.mypinata.cloud",
+  "decimals": 6
+}
