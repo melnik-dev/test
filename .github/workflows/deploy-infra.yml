@@ -1,0 +1,14 @@
+name: deploy-infra
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'docker-compose.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "start steps deploy-infra"
+      - uses: actions/checkout@v4
+      - run: ls -la
+      - run: echo "end steps deploy-infra"

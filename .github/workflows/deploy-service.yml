@@ -1,7 +1,10 @@
-# file: .github/workflows/workflow.yml
-name: workflow
+name: deploy-service
 # on – определяет события, которые запускают воркфлоу
-on: push
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'service/**'
 jobs:
   # build – произвольно выбранное имя задания
   # их может быть больше одного
@@ -9,9 +12,6 @@ jobs:
     # операционная система для работы воркфлоу
     runs-on: ubuntu-latest
     steps: # список шагов, которые надо выполнить
-      # экшен — выполняет какую-то задачу
-      # checkout — клонирует репозиторий
-      - uses: actions/checkout@v4
-      # run – произвольная bash-команда
-      # ls -la выведет содержимое текущего репозитория
-      - run: ls -la
+      - run: echo "start steps deploy-service"
+      - run: ls
+      - run: echo "end steps deploy-service"
